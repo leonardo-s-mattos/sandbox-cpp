@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "/Users/leonardo.mattos/Projects/sandbox-c"
+		}
+	],
+	"settings": {
+		"files.associations": {
+			"*.tpp": "cpp"
+		},
+		"terminal.integrated.shell.windows": "cmd.exe"
+	}
+}
