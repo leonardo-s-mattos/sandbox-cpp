@@ -6,38 +6,27 @@
 using namespace std;
 
 
-int main() {
-    /* Enter your code here. Read input from STDIN. Print output to STDOUT */  
+int main() { 
     std::ios::sync_with_stdio(false);
     int n;
     cin >> n;
     vector<int> numbers(n);
 
-    int count = 0;
-    while(count<n){
-        cin >> numbers[count];
-        count++;
+    for (int i =0; i<n; i++) {
+        cin >> numbers[i];
     }
 
-    int q;
-    cin >> q;
-    vector<int> queries(q);
-
-    count = 0;
-    while(count<q){
-        cin >> queries[count];   
-        count++;
-    }
-
+    cin >> n;
     vector<int>::iterator it;
-    for(int j=0;j<queries.size();j++){
-        it = find (numbers.begin(), numbers.end(), queries[j]);
-        if (it != numbers.end()){
+    int query;
+    for(int j=0;j<n;j++){
+        cin >> query;
+        it = lower_bound (numbers.begin(), numbers.end(), query);
+        
+        if (it != numbers.end() && *it == query) {
             cout << "Yes " << distance(numbers.begin(), it)+1 << '\n';
         } else{
-            vector<int>::iterator low;
-            low = lower_bound (numbers.begin(), numbers.end(), queries[j]);
-            cout << "No " << distance(numbers.begin(), low)+1 << '\n';
+            cout << "No " << distance(numbers.begin(), it)+1 << '\n';
         }
     }
 
