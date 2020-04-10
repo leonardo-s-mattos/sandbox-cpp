@@ -17,7 +17,7 @@ template <> class AddElements <string> {
     string element;
     public:
         AddElements (string arg) {element=arg;}
-        string concatenate (string arg) {return element + arg;}
+        string concatenate (string arg) {return (element + arg);}
 };
 
 
