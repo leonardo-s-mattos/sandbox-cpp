@@ -1,4 +1,4 @@
-# sandbox-c
+# sandbox-cpp
 Sandbox repo for C++ programs...  will be used for the learning and practice code in C++
 
 This repo contains the solutions I worked for the HackerHank challenges for C++ language. 
